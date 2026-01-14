@@ -1,0 +1,145 @@
+@startuml
+
+!theme retro-coast from ../themes/retro-coast
+
+hide <<Person>> stereotype
+hide <<External Person>> stereotype
+
+
+package Classifications {
+  component Primary <<primary>>
+  component Secondary <<secondary>>
+  component Tertiary <<tertiary>>
+  component Quaternary <<quaternary>>
+  component BgPrimary <<bgprimary>>
+  component BgSecondary <<bgsecondary>>
+  component BgTertiary <<bgtertiary>>
+  component BgQuaternary <<bgquaternary>>
+}
+
+package "System Boundary with important title" as SystemBoundary <<red>> <<dashed>> <<System>> {
+
+  person Person <<Person>> [
+    == Person
+    Person
+  ]
+
+  actor Actor <<Person>> [
+    == Actor
+    Actor
+  ]
+
+  component SoftwareSystem <<white>> <<Software System>> [
+    == Software System
+    Software System
+  ]
+
+  component Container <<Container>> [
+    == Container
+    Container
+  ]
+
+  component Component <<white>> <<dashed>> <<Component>> [
+    == Component
+    Component
+  ]
+}
+
+package "Container Boundary A" <<Container>> {
+  component ContainerA1 <<green>> [
+    == Container 1
+    Container 1
+  ]
+
+  component ContainerA2 <<yellow>> [
+    == Container 2
+    Container 2
+  ]
+
+  component ContainerA3 <<orange>> [
+    == Container 3
+    Container 3
+  ]
+
+  component ContainerA4 <<red>> [
+    == Container 4
+    Container 4
+  ]
+
+  component ContainerA5 <<violet>> [
+    == Container 5
+    Container 5
+  ]
+
+  component ContainerA6 <<white>> [
+    == Container 6
+    Container 6
+  ]
+}
+
+package "Container Boundary B" <<Container>> {
+  component ContainerB1 <<bggreen>> [
+    == Container 1
+    Container 1
+  ]
+
+  component ContainerB2 <<bgyellow>> [
+    == Container 2
+    Container 2
+  ]
+
+  component ContainerB3 <<bgorange>>[
+    == Container 3
+    Container 3
+  ]
+
+  component ContainerB4 <<bgred>> [
+    == Container 4
+    Container 4
+  ]
+
+  component ContainerB5 <<bgviolet>> [
+    == Container 5
+    Container 5
+  ]
+
+  component ContainerB6 <<bgwhite>> [
+    == Container 6
+    Container 6
+  ]
+}
+
+package Relationships <<dotted>> {
+  label " " as A
+  label " " as B
+  label " " as C
+  label " " as D
+  label " " as E
+  label " " as F
+  label " " as G
+  label " " as H
+  label " " as I
+  label " " as J
+}
+
+A -d- B <<green>> : Text
+C -d- D <<yellow>> : Text
+E -d- F <<orange>> : Text
+G -d- H <<red>> : Text
+I -d- J <<violet>> : Text
+
+
+SoftwareSystem .r.> Container <<highlight>> : says hello to
+Container .r.> Component: says hello to
+
+
+SystemBoundary -d[hidden]- [Container Boundary A]
+' SystemBoundary -d[hidden]- [Container Boundary B]
+[Container Boundary A] -r[hidden]- [Container Boundary B]
+[Container Boundary A] -d[hidden]-- Classifications
+[Container Boundary B] -d[hidden]-- Classifications
+[Container Boundary B] -d[hidden]-- Relationships
+Classifications -r[hidden]- Relationships
+
+
+@enduml

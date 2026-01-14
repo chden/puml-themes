@@ -1,0 +1,79 @@
+@startuml
+
+!theme retro-coast from ../themes/retro-coast
+
+
+title "Container View:\nInternet Banking System"
+caption "The container diagram for the Internet Banking System | Simon Brown | c4model.com | Licence: CC BY 4.0"
+
+
+person Customer <<Person>> [
+  == Personal Banking
+  == Customer
+  A customer of the bank with one
+  or more bank accounts.
+]
+
+component SimpleEmailService <<External Software System>> [
+  == Amazon Web Services
+  == Simple Email Service
+  Cloud-based email service provider.
+]
+
+component CoreBankingSystem <<Software System>> [
+  == Core Banking System
+  Handles core banking functions
+  including customer information,
+  bank account mangement,
+  transactions, etc.
+]
+
+package "Internet Banking System" <<Software System>> {
+  folder StaticContent <<Container>> [
+    == Static Content
+    [Directory]
+    HTML, CSS, JavaScript, etc.
+  ]
+
+  component UI <<Container>> [
+    == <size:16><&browser></size> UI
+    [JavaScript and Angular]
+    Single-page app that provides
+    internet banking functionality to
+    customers via their web browser.
+  ]
+
+  component Backend <<Container>> [
+    == <size:16><&terminal></size> Backend
+    [Java and Spring Boot]
+    Provides internet banking
+    functionality via a JSON/HTTPS API.
+  ]
+
+  component StatementStore <<Container>> [
+    == Statement Store
+    [Amazon Web Services S3 Bucket]
+    Bank account statements
+    rendered as PDF files.
+  ]
+
+  database Database <<Container>> [
+    == Database
+    [MySQL Database Schema]
+    User account information, access, logs, etc.
+  ]
+}
+
+
+Customer .d.> StaticContent      : Loads the UI from
+Customer .d.> UI                 : "Views account balances\nand makes payments\nusing"
+SimpleEmailService .u.> Customer : Sends e-mails to
+StaticContent .r.> UI            : Delivers
+UI .d.> Backend                  : "Makes API calls to\n[JSON/HTTPS]"
+Backend .d.> StatementStore      : "Reads from and writes to\n[AWS S3 API/HTTPS]"
+Backend .d.> Database            : "Reads from and writes to\n[MySQL protocol/TLS]"
+Backend .u.> SimpleEmailService  : "Makes API calls to\n[XML/HTTPS]"
+Backend .r.> CoreBankingSystem   : "Makes API calls to\n[XML/HTTPS]"
+
+
+@enduml

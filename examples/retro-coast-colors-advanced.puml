@@ -1,0 +1,131 @@
+@startuml
+
+!$FGCOLOR = "#666666"
+!$BGCOLOR = "#ffffff"
+
+!$BOUNDARY_BGCOLOR = "#ffffff"
+!$BOUNDARY_FGCOLOR = "#444444"
+!$BOUNDARY_LINECOLOR = "#444444"
+
+!$SYSTEM_BGCOLOR = "#1168bd"
+!$SYSTEM_FGCOLOR = "#ffffff"
+!$SYSTEM_LINECOLOR = "#1168bd"
+
+!$SOFTWARE_SYSTEM_BGCOLOR = "#1168bd"
+!$SOFTWARE_SYSTEM_FGCOLOR = "#ffffff"
+!$SOFTWARE_SYSTEM_LINECOLOR = "#1168bd"
+
+!$CONTAINER_BGCOLOR = "#438dd5"
+!$CONTAINER_FGCOLOR = "#ffffff"
+!$CONTAINER_LINECOLOR = "#438dd5"
+
+!$COMPONENT_BGCOLOR = "#85bbf0"
+!$COMPONENT_FGCOLOR = "#ffffff"
+!$COMPONENT_LINECOLOR = "#85bbf0"
+
+!$PERSON_BGCOLOR = "#08427b"
+!$PERSON_FGCOLOR = "#ffffff"
+!$PERSON_LINECOLOR = "#08427b"
+
+!$EXTERNAL_SYSTEM_BGCOLOR = "#999999"
+!$EXTERNAL_SYSTEM_FGCOLOR = "#ffffff"
+!$EXTERNAL_SYSTEM_LINECOLOR = "#999999"
+
+!$EXTERNAL_SOFTWARE_SYSTEM_BGCOLOR = "#999999"
+!$EXTERNAL_SOFTWARE_SYSTEM_FGCOLOR = "#ffffff"
+!$EXTERNAL_SOFTWARE_SYSTEM_LINECOLOR = "#999999"
+
+!$EXTERNAL_CONTAINER_BGCOLOR = "#b3b3b3"
+!$EXTERNAL_CONTAINER_FGCOLOR = "#ffffff"
+!$EXTERNAL_CONTAINER_LINECOLOR = "#b3b3b3"
+
+!$EXTERNAL_COMPONENT_BGCOLOR = "#cccccc"
+!$EXTERNAL_COMPONENT_FGCOLOR = "#ffffff"
+!$EXTERNAL_COMPONENT_LINECOLOR = "#cccccc"
+
+!$EXTERNAL_PERSON_BGCOLOR = "#686868"
+!$EXTERNAL_PERSON_FGCOLOR = "#ffffff"
+!$EXTERNAL_PERSON_LINECOLOR = "#686868"
+
+
+!theme retro-coast from ../themes/retro-coast
+
+
+
+person Person <<Person>> [
+  == Person
+  Person
+]
+
+actor Actor <<fg>> <<Person>> [
+  == Actor
+  Actor
+]
+
+package "System Boundary" <<dashed>> <<System>> {
+    component SoftwareSystem <<System>> [
+    == Software System
+    Software System
+  ]
+
+
+  component SoftwareSystem2 <<Software System>> [
+    == Software System
+    Software System
+  ]
+
+  component Container <<Container>> [
+    == Container
+    Container
+  ]
+
+  component Component <<Component>> [
+    == Component
+    Component
+  ]
+}
+
+person ExternalPerson <<External Person>> [
+  == External Person
+  External Person
+]
+
+actor ExternalActor <<fg>> <<External Person>> [
+  == External Actor
+  External Actor
+]
+
+package "External System Boundary" <<dashed>> <<External System>> {
+    component ExternalSoftwareSystem <<External System>> [
+    == External Software System
+    External Software System
+  ]
+
+
+  component ExternalSoftwareSystem2 <<External Software System>> [
+    == External Software System
+    External Software System
+  ]
+
+  component ExternalContainer <<External Container>> [
+    == External Container
+    External Container
+  ]
+
+  component ExternalComponent <<External Component>> [
+    == External Component
+    External Component
+  ]
+}
+
+
+SoftwareSystem -r-> Container : says hello to
+Container .r.> Component: says hello to\n[async, HTTPS]
+
+[System Boundary] -d[hidden]-> [External System Boundary]
+
+ExternalSoftwareSystem -r-> ExternalContainer : says hello to
+ExternalContainer .r.> ExternalComponent: "says hello to\n[async, HTTPS]"
+
+
+@enduml

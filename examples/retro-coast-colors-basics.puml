@@ -1,0 +1,94 @@
+@startuml
+
+' Tropical colors
+!$PRIMARY_COLOR = "#7adada"
+!$SECONDARY_COLOR = "#ffec81"
+!$TERTIARY_COLOR = "#ffbbc8"
+!$QUATERNARY_COLOR = "#ffa476"
+
+!theme retro-coast from ../themes/retro-coast
+
+' Some more custom colors
+!$IMPORTANT = "#fa732f"
+
+
+person Person <<Person>> [
+  == Person
+  Person
+]
+
+actor Actor <<Person>> $IMPORTANT [
+  == Actor
+  Actor
+]
+
+package "System Boundary" <<dashed>> <<System>> {
+  component SoftwareSystem <<System>> [
+    == Software System
+    Software System
+  ]
+
+  component SoftwareSystem2 <<Software System>> [
+    == Software System
+    Software System
+  ]
+
+  component Container <<Container>> [
+    == Container
+    Container
+  ]
+
+  component Component <<Component>> [
+    == Component
+    Component
+  ]
+
+  component Default [
+    == Default
+    Default
+  ]
+}
+
+person ExternalPerson <<External Person>> [
+  == External Person
+  External Person
+]
+
+actor ExternalActor <<External Person>> [
+  == External Actor
+  External Actor
+]
+
+package "External System Boundary" <<dashed>> <<External System>> {
+  component ExternalSoftwareSystem <<External System>> [
+    == External Software System
+    External Software System
+  ]
+
+  component ExternalSoftwareSystem2 <<External Software System>> [
+    == External Software System
+    External Software System
+  ]
+
+  component ExternalContainer <<External Container>> [
+    == External Container
+    External Container
+  ]
+
+  component ExternalComponent <<External Component>> [
+    == External Component
+    External Component
+  ]
+}
+
+
+SoftwareSystem -r-> Container : says hello to
+Container .r.> Component: says hello to\n[async, HTTPS]
+
+[System Boundary] -d[hidden]-> [External System Boundary]
+
+ExternalSoftwareSystem -r-> ExternalContainer : says hello to
+ExternalContainer .r.> ExternalComponent: "says hello to\n[async, HTTPS]"
+
+
+@enduml
