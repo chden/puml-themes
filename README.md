@@ -8,8 +8,8 @@ It provides customizable stereotypes for [C4 model diagrams](https://c4model.com
 
 ### Retro Coast C4 Model
 
-<img src="examples/retro-coast-c4-container.svg" width="75%" style="display: block; margin: auto;">
+<img src="examples/retro-coast-c4-container.svg" width="75%">
 
 ### Retro Coast C4 Model with Classic Colors
 
-<img src="examples/retro-coast-colors-advanced.svg" width="100%" style="display: block; margin: auto;">
+![](examples/retro-coast-colors-advanced.svg)
