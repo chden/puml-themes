@@ -10,6 +10,10 @@ It provides customizable stereotypes for [C4 model diagrams](https://c4model.com
 
 <img src="examples/retro-coast-c4-container.svg" width="75%">
 
+### Retro Coast with Custom Colors
+
+![](examples/retro-coast-colors-basic.svg)
+
 ### Retro Coast C4 Model with Classic Colors
 
 ![](examples/retro-coast-colors-advanced.svg)
