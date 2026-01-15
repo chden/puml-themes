@@ -23,12 +23,12 @@ actor Actor <<Person>> $IMPORTANT [
 ]
 
 package "System Boundary" <<dashed>> <<System>> {
-  component SoftwareSystem <<System>> [
-    == Software System
-    Software System
+  component System <<System>> [
+    == System
+    System
   ]
 
-  component SoftwareSystem2 <<Software System>> [
+  component SoftwareSystem <<Software System>> [
     == Software System
     Software System
   ]
@@ -60,12 +60,12 @@ actor ExternalActor <<External Person>> [
 ]
 
 package "External System Boundary" <<dashed>> <<External System>> {
-  component ExternalSoftwareSystem <<External System>> [
-    == External Software System
-    External Software System
+  component ExternalSystem <<External System>> [
+    == External System
+    External System
   ]
 
-  component ExternalSoftwareSystem2 <<External Software System>> [
+  component ExternalSoftwareSystem <<External Software System>> [
     == External Software System
     External Software System
   ]
@@ -81,7 +81,7 @@ package "External System Boundary" <<dashed>> <<External System>> {
   ]
 }
 
-
+System -r[thickness=0]- SoftwareSystem
 SoftwareSystem -r-> Container : says hello to
 Container .r.> Component: says hello to\n[async, HTTPS]
 

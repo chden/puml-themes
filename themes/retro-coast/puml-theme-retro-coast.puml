@@ -19,7 +19,7 @@
 !$DIMGRAY = "#555555"
 !$GRAY = "#8b8b8b"
 !$STONEGRAY = "#a9a9a9"
-!$SILVER = "#c9c9c9"
+!$SILVER = "#c6c6c6"
 !$CLOUD = "#e4e4e4"
 !$WHITE = "#ffffff"
 
@@ -38,6 +38,10 @@
 !$BGCOLOR ?= $CLOUD
 !$LINECOLOR ?= $FGCOLOR
 !$HYPERLINK_COLOR ?= $DEEPBLUE
+
+' Arrow colors
+!$ARROW_FGCOLOR ?= $FGCOLOR
+!$ARROW_LINECOLOR ?= $FGCOLOR
 
 ' Theme colors
 !$PRIMARY_COLOR ?= $SEAFOAMBLUE
@@ -113,6 +117,12 @@
     LineColor $LINECOLOR
   }
 
+  arrow {
+    FontColor $ARROW_FGCOLOR
+    LineThickness 1
+    LineColor $ARROW_LINECOLOR
+  }
+
   ' Stereotypes
   .System {
     BackgroundColor $SYSTEM_BGCOLOR
@@ -185,6 +195,10 @@
   }
   .line {
     LineColor $LINECOLOR
+  }
+  .arrow {
+    FontColor $ARROW_FGCOLOR
+    LineColor $ARROW_COLOR
   }
 
   .primary {
