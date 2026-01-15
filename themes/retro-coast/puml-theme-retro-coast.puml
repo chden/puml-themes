@@ -11,9 +11,9 @@
 
 ' Color palette
 !$DEEPBLUE = "#16396e"
-!$SEAFOAMBLUE = "#5e8fda"
+!$SEAFOAMBLUE = "#64a0e4"
 !$AQUAMARINE = "#98d4cc"
-!$SEAGREEN = "#6dbd67"
+!$SEAGREEN = "#78cc73"
 !$SAND = "#eccd7d"
 !$EERIEBLACK = "#171c1f"
 !$DIMGRAY = "#555555"
@@ -173,6 +173,10 @@
     LineStyle 2
   }
 
+  .sharp {
+    RoundCorner 0
+  }
+
   .fg {
     FontColor $FGCOLOR
   }
@@ -305,6 +309,8 @@ skinparam actor {
 ' show <<name>> stereotype
 hide <<dashed>> stereotype
 hide <<dotted>> stereotype
+
+hide <<sharp>> stereotype
 
 hide <<fg>> stereotype
 hide <<bg>> stereotype

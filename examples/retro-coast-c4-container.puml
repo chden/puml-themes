@@ -35,7 +35,7 @@ package "Internet Banking System" <<Software System>> {
     HTML, CSS, JavaScript, etc.
   ]
 
-  component UI <<Container>> [
+  component UI <<Component>> [
     == <size:16><&browser></size> UI
     [JavaScript and Angular]
     Single-page app that provides
