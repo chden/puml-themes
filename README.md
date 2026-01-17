@@ -14,10 +14,20 @@ such as `Person`, `System`, `Container` or `Component`.
 
 <img src="examples/retro-coast-c4-container.svg" width="75%">
 
-### Custom Colors
+### Custom Theme Colors
 
 ![](examples/retro-coast-colors-basic.svg)
 
 ### Classic C4 Model Colors
 
 ![](examples/retro-coast-colors-advanced.svg)
+
+
+### Stereotypes and Inline Colors
+
+![](examples/retro-coast-stereotypes.svg)
+
+### Basic Elements
+
+
+<img src="examples/retro-coast-elements.svg" width="75%">

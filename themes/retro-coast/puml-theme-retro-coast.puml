@@ -24,7 +24,7 @@
 !$WHITE = "#ffffff"
 
 !$GREEN = "#277721"
-!$YELLOW = "#ffca1a"
+!$YELLOW = "#f3ba00"
 !$ORANGE = "#df7021"
 !$RED = "#d31009"
 !$VIOLET = "#6122c7"
@@ -99,6 +99,13 @@
 !$EXTERNAL_PERSON_BGCOLOR ?= $GRAY
 !$EXTERNAL_PERSON_FGCOLOR ?= $FGCOLOR
 !$EXTERNAL_PERSON_LINECOLOR ?= $FGCOLOR
+
+' Callout colors
+!$NOTE ?= $GREEN
+!$WARNING ?= $YELLOW
+!$CAUTION ?= $ORANGE
+!$IMPORTANT ?= $RED
+!$TIP ?= $VIOLET
 
 
 <style>
@@ -227,42 +234,25 @@
     BackgroundColor $QUATERNARY_COLOR
   }
 
-  .green {
-    FontColor $GREEN
+  .note {
+    FontColor $NOTE
+    LineColor $NOTE
   }
-  .yellow {
-    FontColor $YELLOW
+  .warning {
+    FontColor $WARNING
+    LineColor $WARNING
   }
-  .orange {
-    FontColor $ORANGE
+  .caution {
+    FontColor $CAUTION
+    LineColor $CAUTION
   }
-  .red {
-    FontColor $RED
+  .important {
+    FontColor $IMPORTANT
+    LineColor $IMPORTANT
   }
-  .violet {
-    FontColor $VIOLET
-  }
-  .white {
-    FontColor $WHITE
-  }
-
-  .bggreen {
-    BackgroundColor $GREEN
-  }
-  .bgyellow {
-    BackgroundColor $YELLOW
-  }
-  .bgorange {
-    BackgroundColor $ORANGE
-  }
-  .bgred {
-    BackgroundColor $RED
-  }
-  .bgviolet {
-    BackgroundColor $VIOLET
-  }
-  .bgwhite {
-    BackgroundColor $WHITE
+  .tip {
+    FontColor $TIP
+    LineColor $TIP
   }
 
   !procedure $BOUNDARY()
@@ -340,16 +330,8 @@ hide <<bgsecondary>> stereotype
 hide <<bgtertiary>> stereotype
 hide <<bgquaternary>> stereotype
 
-hide <<green>> stereotype
-hide <<yellow>> stereotype
-hide <<orange>> stereotype
-hide <<red>> stereotype
-hide <<violet>> stereotype
-hide <<white>> stereotype
-
-hide <<bggreen>> stereotype
-hide <<bgyellow>> stereotype
-hide <<bgorange>> stereotype
-hide <<bgred>> stereotype
-hide <<bgviolet>> stereotype
-hide <<bgwhite>> stereotype
+hide <<note>> stereotype
+hide <<warning>> stereotype
+hide <<caution>> stereotype
+hide <<important>> stereotype
+hide <<tip>> stereotype

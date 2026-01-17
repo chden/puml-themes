@@ -6,18 +6,7 @@ hide <<Person>> stereotype
 hide <<External Person>> stereotype
 
 
-package Classifications {
-  component Primary <<primary>>
-  component Secondary <<secondary>>
-  component Tertiary <<tertiary>>
-  component Quaternary <<quaternary>>
-  component BgPrimary <<bgprimary>>
-  component BgSecondary <<bgsecondary>>
-  component BgTertiary <<bgtertiary>>
-  component BgQuaternary <<bgquaternary>>
-}
-
-package "System Boundary with important title" as SystemBoundary <<red>> <<dashed>> <<System>> {
+package "System Boundary with important title" as SystemBoundary <<important>> <<dashed>> <<System>> {
 
   person Person <<Person>> [
     == Person
@@ -29,7 +18,7 @@ package "System Boundary with important title" as SystemBoundary <<red>> <<dashe
     Actor
   ]
 
-  component SoftwareSystem <<white>> <<Software System>> [
+  component SoftwareSystem <<Software System>> [
     == Software System
     Software System
   ]
@@ -39,74 +28,60 @@ package "System Boundary with important title" as SystemBoundary <<red>> <<dashe
     Container
   ]
 
-  component Component <<white>> <<dashed>> <<Component>> [
+  component Component <<dashed>> <<Component>> [
     == Component
     Component
   ]
 }
 
-package "Container Boundary A" <<Container>> {
-  component ContainerA1 <<green>> [
-    == Container 1
-    Container 1
-  ]
+together {
+  package "Theme Colors" {
+    component Primary <<primary>>
+    component Secondary <<secondary>>
+    component Tertiary <<tertiary>>
+    component Quaternary <<quaternary>>
+    component BgPrimary <<bgprimary>>
+    component BgSecondary <<bgsecondary>>
+    component BgTertiary <<bgtertiary>>
+    component BgQuaternary <<bgquaternary>>
+  }
 
-  component ContainerA2 <<yellow>> [
-    == Container 2
-    Container 2
-  ]
+  package Callouts <<Container>> {
+    component Container1 <<note>> [
+      == Container 1
+      Container 1
+    ]
 
-  component ContainerA3 <<orange>> [
-    == Container 3
-    Container 3
-  ]
+    component Container2 <<warning>> [
+      == Container 2
+      Container 2
+    ]
 
-  component ContainerA4 <<red>> [
-    == Container 4
-    Container 4
-  ]
+    component Container3 <<caution>> [
+      == Container 3
+      Container 3
+    ]
 
-  component ContainerA5 <<violet>> [
-    == Container 5
-    Container 5
-  ]
+    component Container4 <<important>> [
+      == Container 4
+      Container 4
+    ]
 
-  component ContainerA6 <<white>> [
-    == Container 6
-    Container 6
-  ]
-}
+    component Container5 <<tip>> [
+      == Container 5
+      Container 5
+    ]
 
-package "Container Boundary B" <<Container>> {
-  component ContainerB1 <<bggreen>> [
-    == Container 1
-    Container 1
-  ]
-
-  component ContainerB2 <<bgyellow>> [
-    == Container 2
-    Container 2
-  ]
-
-  component ContainerB3 <<bgorange>>[
-    == Container 3
-    Container 3
-  ]
-
-  component ContainerB4 <<bgred>> [
-    == Container 4
-    Container 4
-  ]
-
-  component ContainerB5 <<bgviolet>> [
-    == Container 5
-    Container 5
-  ]
-
-  component ContainerB6 <<bgwhite>> [
-    == Container 6
-    Container 6
-  ]
+    component Container6 #back:white;line:00FFFF;text:green [
+      == Custom Styles
+      Container 6
+    ]
+    note top <<important>> {
+      Some
+      important
+      note
+    }
+  }
 }
 
 package Relationships <<dotted>> {
@@ -120,26 +95,29 @@ package Relationships <<dotted>> {
   label " " as H
   label " " as I
   label " " as J
+  label " " as K
+  label " " as L
 }
 
-A -d- B <<green>> : Text
-C -d- D <<yellow>> : Text
-E -d- F <<orange>> : Text
-G -d- H <<red>> : Text
-I -d- J <<violet>> : Text
+A -d- B <<note>> : Note
+C -d- D <<warning>> : Warning
+E -d- F <<caution>> : Caution
+G -d- H <<important>> : Important
+I -d- J <<tip>> : Tip
+K -d- L #line:green;text:f134f3 : Custom
 
 
 SoftwareSystem .r.> Container <<highlight>> : says hello to
 Container .r.> Component: says hello to
 
 
-SystemBoundary -d[hidden]- [Container Boundary A]
-' SystemBoundary -d[hidden]- [Container Boundary B]
-[Container Boundary A] -r[hidden]- [Container Boundary B]
-[Container Boundary A] -d[hidden]-- Classifications
-[Container Boundary B] -d[hidden]-- Classifications
-[Container Boundary B] -d[hidden]-- Relationships
-Classifications -r[hidden]- Relationships
+' Layout helper
+SystemBoundary -d[hidden]- Callouts
+Callouts -d[hidden]- Relationships
+[Theme Colors] -d[hidden]- Relationships
+[Theme Colors] -d[hidden]- Relationships
+[Theme Colors] -d[hidden]- Relationships
+[Theme Colors] -d[hidden]- Relationships
 
 
 @enduml
