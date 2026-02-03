@@ -341,3 +341,22 @@ hide <<warning>> stereotype
 hide <<caution>> stereotype
 hide <<important>> stereotype
 hide <<tip>> stereotype
+
+
+' Simple legend
+!procedure legend($title="Legend")
+skinparam LegendBorderColor transparent
+legend right
+  <#transparent,#transparent>|= $title |
+  |<$PERSON_BGCOLOR><color:$PERSON_FGCOLOR> Person |
+  |<$SYSTEM_BGCOLOR><color:$SYSTEM_FGCOLOR> System |
+  |<$CONTAINER_BGCOLOR><color:$CONTAINER_FGCOLOR> Container |
+  |<$COMPONENT_BGCOLOR><color:$COMPONENT_FGCOLOR> Component |
+  |<$EXTERNAL_SYSTEM_BGCOLOR><color:$EXTERNAL_SYSTEM_FGCOLOR> External System |
+  |<$EXTERNAL_CONTAINER_BGCOLOR><color:$EXTERNAL_CONTAINER_FGCOLOR> External Container |
+  |<$EXTERNAL_COMPONENT_BGCOLOR><color:$EXTERNAL_COMPONENT_FGCOLOR> External Component |
+  ' |<img:https://img.plantuml.biz/plantuml/png/SoWkIImgAStDuSf9J4hDKL02miHYXKH3L7wI8LUYeOAk7OZXa9gN0jG00000> sync|
+  ' |<img:https://img.plantuml.biz/plantuml/png/SoWkIImgAStDuSf9J4hDKL02miHYXKH3L7wI8LUYeO9kT4fYSKPgIgmTIC0XDIy5g140> async|
+endlegend
+!endprocedure
+' legend()

@@ -81,4 +81,6 @@ ExternalSoftwareSystem -r-> ExternalContainer : says hello to
 ExternalContainer .r.> ExternalComponent: "says hello to\n[async, HTTPS]"
 
 
+legend()
+
 @enduml
