@@ -1,9 +1,15 @@
 ''
-'' Retro Coast Theme - A PlantUML theme featuring coastal color palette.
-'' It provides customizable stereotypes for C4 model diagrams and general styling.
+'' Retro Coast Theme
+''
+'' A PlantUML theme featuring a coastal color palette with customizable 
+'' stereotypes for C4 model diagrams and general styling.
+''
+'' Usage:
+''   !theme retro-coast from https://raw.githubusercontent.com/chden/puml-themes/main/themes/retro-coast/
 ''
 '' Author: Christoph Denninger
-'' Copyright (c) 2026 Christoph Denninger
+'' License: MIT
+'' https://github.com/chden/puml-themes
 ''
 
 !$THEME = "retro-coast"

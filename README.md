@@ -12,22 +12,22 @@ such as `Person`, `System`, `Container` or `Component`.
 
 ### Container View
 
-<img src="examples/retro-coast-c4-container.svg" width="75%">
+[<img src="examples/retro-coast-c4-container.svg" width="75%">](https://github.com/chden/puml-themes/blob/main/examples/retro-coast-c4-container.puml)
 
 ### Custom Theme Colors
 
-![](examples/retro-coast-colors-basic.svg)
+[![](examples/retro-coast-colors-basic.svg)](https://github.com/chden/puml-themes/blob/main/examples/retro-coast-colors-basic.puml)
 
-### Classic C4 Model Colors
+### Using Color Palatte for Classic C4 Model Colors
 
-![](examples/retro-coast-colors-advanced.svg)
+[![](examples/retro-coast-colors-palatte.svg)](https://github.com/chden/puml-themes/blob/main/examples/retro-coast-colors-palatte.puml)
 
 
 ### Stereotypes and Inline Colors
 
-![](examples/retro-coast-stereotypes.svg)
+[![](examples/retro-coast-stereotypes.svg)](https://github.com/chden/puml-themes/blob/main/examples/retro-coast-stereotypes.puml)
 
 ### Basic Elements
 
 
-<img src="examples/retro-coast-elements.svg" width="75%">
+[<img src="examples/retro-coast-elements.svg" width="75%">](https://github.com/chden/puml-themes/blob/main/examples/retro-coast-elements.puml)
