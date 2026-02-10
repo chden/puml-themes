@@ -1,0 +1,68 @@
+''
+'' Retro Coast Theme - Outline Palette
+''
+'' Maintains the Retro Coast aesthetic with slightly darkened tones,
+'' using background colors for element outlines and text.
+''
+'' Usage:
+''   !include https://raw.githubusercontent.com/chden/puml-themes/main/palettes/retro-coast-outline.iuml
+''   !theme retro-coast from https://raw.githubusercontent.com/chden/puml-themes/main/themes/retro-coast/
+''
+'' Author: Christoph Denninger
+'' License: MIT
+'' https://github.com/chden/puml-themes
+''
+
+
+!$SEAFOAMBLUE = %darken("#64a0e4", 20)
+!$AQUAMARINE = %darken("#98d4cc", 20)
+!$SEAGREEN = %darken("#78cc73", 20)
+!$SAND = %darken("#eccd7d", 10)
+!$GRAY = %darken("#a5a5a5", 50)
+!$STONEGRAY = %darken("#c9c9c9", 40)
+!$SILVER = %darken("#e0e0e0", 35)
+!$CLOUD = %darken("#eeeeee", 35)
+
+
+!$BGCOLOR = transparent
+!$LINECOLOR = $CLOUD
+
+!$SYSTEM_BGCOLOR = transparent
+!$SYSTEM_FGCOLOR = $SEAFOAMBLUE
+!$SYSTEM_LINECOLOR = $SEAFOAMBLUE
+
+!$SOFTWARE_SYSTEM_BGCOLOR = transparent
+!$SOFTWARE_SYSTEM_FGCOLOR = $SEAFOAMBLUE
+!$SOFTWARE_SYSTEM_LINECOLOR = $SEAFOAMBLUE
+
+!$CONTAINER_BGCOLOR = transparent
+!$CONTAINER_FGCOLOR = $AQUAMARINE
+!$CONTAINER_LINECOLOR = $AQUAMARINE
+
+!$COMPONENT_BGCOLOR = transparent
+!$COMPONENT_FGCOLOR = $SEAGREEN
+!$COMPONENT_LINECOLOR = $SEAGREEN
+
+!$PERSON_BGCOLOR = transparent
+!$PERSON_FGCOLOR = $SAND
+!$PERSON_LINECOLOR = $SAND
+
+!$EXTERNAL_SYSTEM_BGCOLOR = transparent
+!$EXTERNAL_SYSTEM_FGCOLOR = $GRAY
+!$EXTERNAL_SYSTEM_LINECOLOR = $GRAY
+
+!$EXTERNAL_SOFTWARE_SYSTEM_BGCOLOR = transparent
+!$EXTERNAL_SOFTWARE_SYSTEM_FGCOLOR = $GRAY
+!$EXTERNAL_SOFTWARE_SYSTEM_LINECOLOR = $GRAY
+
+!$EXTERNAL_CONTAINER_BGCOLOR = transparent
+!$EXTERNAL_CONTAINER_FGCOLOR = $STONEGRAY
+!$EXTERNAL_CONTAINER_LINECOLOR = $STONEGRAY
+
+!$EXTERNAL_COMPONENT_BGCOLOR = transparent
+!$EXTERNAL_COMPONENT_FGCOLOR = $SILVER
+!$EXTERNAL_COMPONENT_LINECOLOR = $SILVER
+
+!$EXTERNAL_PERSON_BGCOLOR = transparent
+!$EXTERNAL_PERSON_FGCOLOR = $GRAY
+!$EXTERNAL_PERSON_LINECOLOR = $GRAY

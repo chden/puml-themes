@@ -20,7 +20,7 @@ such as `Person`, `System`, `Container` or `Component`.
 
 ### Using Color Palatte for Classic C4 Model Colors
 
-[![](examples/retro-coast-colors-palatte.svg)](https://github.com/chden/puml-themes/blob/main/examples/retro-coast-colors-palatte.puml)
+[![](examples/retro-coast-color-palette.svg)](https://github.com/chden/puml-themes/blob/main/examples/retro-coast-color-palette.puml)
 
 
 ### Stereotypes and Inline Colors

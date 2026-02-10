@@ -1,0 +1,20 @@
+''
+'' Retro Coast Theme - Tropical Palette
+''
+'' A vibrant, tropical color palette for systems and components
+'' balanced with neutral grays for external elements.
+''
+'' Usage:
+''   !include https://raw.githubusercontent.com/chden/puml-themes/main/palettes/retro-coast-tropical.iuml
+''   !theme retro-coast from https://raw.githubusercontent.com/chden/puml-themes/main/themes/retro-coast/
+''
+'' Author: Christoph Denninger
+'' License: MIT
+'' https://github.com/chden/puml-themes
+''
+
+
+!$PRIMARY_COLOR = "#7adada"
+!$SECONDARY_COLOR = "#ffec81"
+!$TERTIARY_COLOR = "#ffbbc8"
+!$QUATERNARY_COLOR = "#ffa476"

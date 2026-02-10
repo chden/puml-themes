@@ -22,9 +22,9 @@
 !$SEAGREEN = "#78cc73"
 !$SAND = "#eccd7d"
 !$EERIEBLACK = "#171c1f"
-!$DIMGRAY = "#818181"
+!$DIMGRAY = "#555555"
 !$GRAY = "#a5a5a5"
-!$STONEGRAY = "#c9c9c9"
+!$STONEGRAY = "#bebebe"
 !$SILVER = "#e0e0e0"
 !$CLOUD = "#eeeeee"
 !$WHITE = "#ffffff"
@@ -343,20 +343,29 @@ hide <<important>> stereotype
 hide <<tip>> stereotype
 
 
+
+!function getColor($primary, $secondary)
+  !if ($primary == "transparent")
+    !return $secondary
+  !endif
+  !return $primary
+!endprocedure
+
 ' Simple legend
 !procedure legend($title="Legend")
 skinparam LegendBorderColor transparent
+
 legend right
-  <#transparent,#transparent>|= $title |
-  |<$PERSON_BGCOLOR><color:$PERSON_FGCOLOR> Person |
-  |<$SYSTEM_BGCOLOR><color:$SYSTEM_FGCOLOR> System |
-  |<$CONTAINER_BGCOLOR><color:$CONTAINER_FGCOLOR> Container |
-  |<$COMPONENT_BGCOLOR><color:$COMPONENT_FGCOLOR> Component |
-  |<$EXTERNAL_SYSTEM_BGCOLOR><color:$EXTERNAL_SYSTEM_FGCOLOR> External System |
-  |<$EXTERNAL_CONTAINER_BGCOLOR><color:$EXTERNAL_CONTAINER_FGCOLOR> External Container |
-  |<$EXTERNAL_COMPONENT_BGCOLOR><color:$EXTERNAL_COMPONENT_FGCOLOR> External Component |
-  ' |<img:https://img.plantuml.biz/plantuml/png/SoWkIImgAStDuSf9J4hDKL02miHYXKH3L7wI8LUYeOAk7OZXa9gN0jG00000> sync|
-  ' |<img:https://img.plantuml.biz/plantuml/png/SoWkIImgAStDuSf9J4hDKL02miHYXKH3L7wI8LUYeO9kT4fYSKPgIgmTIC0XDIy5g140> async|
+  <#transparent,#transparent>| <color:transparent> --- |= $title |
+  | <getColor($PERSON_BGCOLOR, $PERSON_LINECOLOR)> | Person |
+  | <getColor($SYSTEM_BGCOLOR, $SYSTEM_LINECOLOR)> | System |
+  | <getColor($CONTAINER_BGCOLOR, $CONTAINER_LINECOLOR)> | Container |
+  | <getColor($COMPONENT_BGCOLOR, $COMPONENT_LINECOLOR)> | Component |
+  | <getColor($EXTERNAL_SYSTEM_BGCOLOR, $EXTERNAL_SYSTEM_LINECOLOR)> | External System |
+  | <getColor($EXTERNAL_CONTAINER_BGCOLOR, $EXTERNAL_CONTAINER_LINECOLOR)> | External Container |
+  | <getColor($EXTERNAL_COMPONENT_BGCOLOR, $EXTERNAL_COMPONENT_LINECOLOR)> | External Component |
+  ' | <img:https://img.plantuml.biz/plantuml/png/SoWkIImgAStDuSf9J4hDKL02miHYXKH3L7wI8LUYeOAk7OZXa9gN0jG00000>|sync|
+  ' | <img:https://img.plantuml.biz/plantuml/png/SoWkIImgAStDuSf9J4hDKL02miHYXKH3L7wI8LUYeO9kT4fYSKPgIgmTIC0XDIy5g140>|async|
 endlegend
 !endprocedure
 ' legend()
