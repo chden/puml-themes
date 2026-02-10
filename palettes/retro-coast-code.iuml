@@ -1,0 +1,21 @@
+''
+'' Retro Coast Theme - Code Palette
+''
+'' A developer-centric palette derived from VSCode syntax highlighting.
+'' Designed to create a seamless visual transition between source code
+'' and architectural diagrams.
+''
+'' Usage:
+''   !include https://raw.githubusercontent.com/chden/puml-themes/main/palettes/retro-coast-code.iuml
+''   !theme retro-coast from https://raw.githubusercontent.com/chden/puml-themes/main/themes/retro-coast/
+''
+'' Author: Christoph Denninger
+'' License: MIT
+'' https://github.com/chden/puml-themes
+''
+
+
+!$PRIMARY_COLOR = "#569cd6"
+!$SECONDARY_COLOR = "#5b914a"
+!$TERTIARY_COLOR = "#ce9178"
+!$QUATERNARY_COLOR = "#f7c509"

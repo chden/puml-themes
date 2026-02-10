@@ -1,6 +1,7 @@
 @startuml
 
 !include ../palettes/retro-coast-blue-classic.iuml
+' !include ../palettes/retro-coast-code.iuml
 ' !include ../palettes/retro-coast-tropical.iuml
 ' !include ../palettes/retro-coast-outline.iuml
 !theme retro-coast from ../themes/retro-coast
