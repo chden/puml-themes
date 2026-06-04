@@ -1,0 +1,371 @@
+''
+'' Retro Coast Theme
+''
+'' A PlantUML theme featuring a coastal color palette with customizable 
+'' stereotypes for C4 model diagrams and general styling.
+''
+'' Usage:
+''   !theme retro-coast from https://raw.githubusercontent.com/chden/puml-themes/main/themes/retro-coast/
+''
+'' Author: Christoph Denninger
+'' License: MIT
+'' https://github.com/chden/puml-themes
+''
+
+!$THEME = "retro-coast"
+
+
+' Color palette
+!$DEEPBLUE = "#16396e"
+!$SEAFOAMBLUE = "#64a0e4"
+!$AQUAMARINE = "#98d4cc"
+!$SEAGREEN = "#78cc73"
+!$SAND = "#eccd7d"
+!$EERIEBLACK = "#171c1f"
+!$DIMGRAY = "#555555"
+!$GRAY = "#a5a5a5"
+!$STONEGRAY = "#bebebe"
+!$SILVER = "#e0e0e0"
+!$CLOUD = "#eeeeee"
+!$WHITE = "#ffffff"
+
+!$GREEN = "#277721"
+!$YELLOW = "#f3ba00"
+!$ORANGE = "#df7021"
+!$RED = "#d31009"
+!$VIOLET = "#6122c7"
+
+' Base font
+!$FONT_NAME ?= "SansSerif"
+
+' Base colors with defaults
+!$FGCOLOR ?= $EERIEBLACK
+!$BGCOLOR_ROOT ?= $WHITE
+!$BGCOLOR ?= $CLOUD
+!$LINECOLOR ?= $FGCOLOR
+!$HYPERLINK_COLOR ?= $DEEPBLUE
+
+' Arrow colors
+!$ARROW_FGCOLOR ?= $FGCOLOR
+!$ARROW_LINECOLOR ?= $FGCOLOR
+
+' Theme colors
+!$PRIMARY_COLOR ?= $SEAFOAMBLUE
+!$SECONDARY_COLOR ?= $AQUAMARINE
+!$TERTIARY_COLOR ?= $SEAGREEN
+!$QUATERNARY_COLOR ?= $SAND
+
+' Boundary colors
+!$BOUNDARY_BGCOLOR ?= $WHITE
+!$BOUNDARY_FGCOLOR ?= $FGCOLOR
+!$BOUNDARY_LINECOLOR ?= $DIMGRAY
+
+' System colors
+!$SYSTEM_BGCOLOR ?= $PRIMARY_COLOR
+!$SYSTEM_FGCOLOR ?= $FGCOLOR
+!$SYSTEM_LINECOLOR ?= $FGCOLOR
+
+' Software System colors
+!$SOFTWARE_SYSTEM_BGCOLOR ?= $PRIMARY_COLOR
+!$SOFTWARE_SYSTEM_FGCOLOR ?= $FGCOLOR
+!$SOFTWARE_SYSTEM_LINECOLOR ?= $FGCOLOR
+
+' Container colors
+!$CONTAINER_BGCOLOR ?= $SECONDARY_COLOR
+!$CONTAINER_FGCOLOR ?= $FGCOLOR
+!$CONTAINER_LINECOLOR ?= $FGCOLOR
+
+' Component colors
+!$COMPONENT_BGCOLOR ?= $TERTIARY_COLOR
+!$COMPONENT_FGCOLOR ?= $FGCOLOR
+!$COMPONENT_LINECOLOR ?= $FGCOLOR
+
+' Person colors
+!$PERSON_BGCOLOR ?= $QUATERNARY_COLOR
+!$PERSON_FGCOLOR ?= $FGCOLOR
+!$PERSON_LINECOLOR ?= $FGCOLOR
+
+' External colors
+!$EXTERNAL_SYSTEM_BGCOLOR ?= $GRAY
+!$EXTERNAL_SYSTEM_FGCOLOR ?= $FGCOLOR
+!$EXTERNAL_SYSTEM_LINECOLOR ?= $FGCOLOR
+
+!$EXTERNAL_SOFTWARE_SYSTEM_BGCOLOR ?= $GRAY
+!$EXTERNAL_SOFTWARE_SYSTEM_FGCOLOR ?= $FGCOLOR
+!$EXTERNAL_SOFTWARE_SYSTEM_LINECOLOR ?= $FGCOLOR
+
+!$EXTERNAL_CONTAINER_BGCOLOR ?= $STONEGRAY
+!$EXTERNAL_CONTAINER_FGCOLOR ?= $FGCOLOR
+!$EXTERNAL_CONTAINER_LINECOLOR ?= $FGCOLOR
+
+!$EXTERNAL_COMPONENT_BGCOLOR ?= $SILVER
+!$EXTERNAL_COMPONENT_FGCOLOR ?= $FGCOLOR
+!$EXTERNAL_COMPONENT_LINECOLOR ?= $FGCOLOR
+
+!$EXTERNAL_PERSON_BGCOLOR ?= $GRAY
+!$EXTERNAL_PERSON_FGCOLOR ?= $FGCOLOR
+!$EXTERNAL_PERSON_LINECOLOR ?= $FGCOLOR
+
+' Callout colors
+!$NOTE ?= $GREEN
+!$WARNING ?= $YELLOW
+!$CAUTION ?= $ORANGE
+!$IMPORTANT ?= $RED
+!$TIP ?= $VIOLET
+
+
+<style>
+  root {
+    BackgroundColor $BGCOLOR_ROOT
+    FontColor $FGCOLOR
+    FontName $FONT_NAME
+    HyperLinkColor $HYPERLINK_COLOR
+  }
+
+  element {
+    BackGroundColor $BGCOLOR;
+    RoundCorner 15
+    HorizontalAlignment center
+    LineThickness 2
+    LineColor $LINECOLOR
+  }
+
+  arrow {
+    FontColor $ARROW_FGCOLOR
+    LineThickness 1
+    LineColor $ARROW_LINECOLOR
+  }
+
+  ' Stereotypes
+  .System {
+    BackgroundColor $SYSTEM_BGCOLOR
+    FontColor $SYSTEM_FGCOLOR
+    LineColor $SYSTEM_LINECOLOR
+  }
+  .Software System {
+    BackgroundColor $SOFTWARE_SYSTEM_BGCOLOR
+    FontColor $SOFTWARE_SYSTEM_FGCOLOR
+    LineColor $SOFTWARE_SYSTEM_LINECOLOR
+  }
+  .Container {
+    BackgroundColor $CONTAINER_BGCOLOR
+    FontColor $CONTAINER_FGCOLOR
+    LineColor $CONTAINER_LINECOLOR
+  }
+  .Component {
+    BackgroundColor $COMPONENT_BGCOLOR
+    FontColor $COMPONENT_FGCOLOR
+    LineColor $COMPONENT_LINECOLOR
+  }
+  .Person {
+    BackgroundColor $PERSON_BGCOLOR
+    FontColor $PERSON_FGCOLOR
+    LineColor $PERSON_LINECOLOR
+  }
+  .External System {
+    BackgroundColor $EXTERNAL_SYSTEM_BGCOLOR
+    FontColor $EXTERNAL_SYSTEM_FGCOLOR
+    LineColor $EXTERNAL_SYSTEM_LINECOLOR
+  }
+  .External Software System {
+    BackgroundColor $EXTERNAL_SOFTWARE_SYSTEM_BGCOLOR
+    FontColor $EXTERNAL_SOFTWARE_SYSTEM_FGCOLOR
+    LineColor $EXTERNAL_SOFTWARE_SYSTEM_LINECOLOR
+  }
+  .External Container {
+    BackgroundColor $EXTERNAL_CONTAINER_BGCOLOR
+    FontColor $EXTERNAL_CONTAINER_FGCOLOR
+    LineColor $EXTERNAL_CONTAINER_LINECOLOR
+  }
+  .External Component {
+    BackgroundColor $EXTERNAL_COMPONENT_BGCOLOR
+    FontColor $EXTERNAL_COMPONENT_FGCOLOR
+    LineColor $EXTERNAL_COMPONENT_LINECOLOR
+  }
+  .External Person {
+    BackgroundColor $EXTERNAL_PERSON_BGCOLOR
+    FontColor $EXTERNAL_PERSON_FGCOLOR
+    LineColor $EXTERNAL_PERSON_LINECOLOR
+  }
+
+  ' Hidden stereotypes
+  .dashed {
+    LineStyle 8
+  }
+  .dotted {
+    LineStyle 2
+  }
+
+  .sharp {
+    RoundCorner 0
+  }
+
+  .fg {
+    FontColor $FGCOLOR
+  }
+  .bg {
+    BackgroundColor $BGCOLOR
+  }
+  .line {
+    LineColor $LINECOLOR
+  }
+  .arrow {
+    FontColor $ARROW_FGCOLOR
+    LineColor $ARROW_COLOR
+  }
+
+  .primary {
+    FontColor $PRIMARY_COLOR
+  }
+  .secondary {
+    FontColor $SECONDARY_COLOR
+  }
+  .tertiary {
+    FontColor $TERTIARY_COLOR
+  }
+  .quaternary {
+    FontColor $QUATERNARY_COLOR
+  }
+
+  .bgprimary {
+    BackgroundColor $PRIMARY_COLOR
+  }
+  .bgsecondary {
+    BackgroundColor $SECONDARY_COLOR
+  }
+  .bgtertiary {
+    BackgroundColor $TERTIARY_COLOR
+  }
+  .bgquaternary {
+    BackgroundColor $QUATERNARY_COLOR
+  }
+
+  .note {
+    FontColor $NOTE
+    LineColor $NOTE
+  }
+  .warning {
+    FontColor $WARNING
+    LineColor $WARNING
+  }
+  .caution {
+    FontColor $CAUTION
+    LineColor $CAUTION
+  }
+  .important {
+    FontColor $IMPORTANT
+    LineColor $IMPORTANT
+  }
+  .tip {
+    FontColor $TIP
+    LineColor $TIP
+  }
+
+  !procedure $BOUNDARY()
+    BackgroundColor $BOUNDARY_BGCOLOR
+    FontColor $BOUNDARY_FGCOLOR
+    LineColor $BOUNDARY_LINECOLOR
+  !endprocedure
+
+  rectangle {
+    $BOUNDARY()
+    .System { $BOUNDARY() }
+    .Software System { $BOUNDARY() }
+    .Container { $BOUNDARY() }
+    .Component { $BOUNDARY() }
+    .Person { $BOUNDARY() }
+    .External System { $BOUNDARY() }
+    .External Software System { $BOUNDARY() }
+    .External Container { $BOUNDARY() }
+    .External Component { $BOUNDARY() }
+    .External Person { $BOUNDARY() }
+  }
+
+  package {
+    $BOUNDARY()
+    .System { $BOUNDARY() }
+    .Software System { $BOUNDARY() }
+    .Container { $BOUNDARY() }
+    .Component { $BOUNDARY() }
+    .Person { $BOUNDARY() }
+    .External System { $BOUNDARY() }
+    .External Software System { $BOUNDARY() }
+    .External Container { $BOUNDARY() }
+    .External Component { $BOUNDARY() }
+    .External Person { $BOUNDARY() }
+  }
+
+  note {
+    BackgroundColor $BGCOLOR
+  }
+</style>
+
+skinparam package {
+  Style rectangle
+}
+
+skinparam component {
+  ' Components use rectangle style instead of the default icon
+  ' To restore the standard component icon, change this to: Style uml2
+  Style rectangle
+}
+
+skinparam actor {
+  Style awesome
+}
+
+' Hide utility stereotypes from diagram output (they're for visual effects, not labels)
+' If you still want to display a stereotype label, you can override with:
+' show <<name>> stereotype
+hide <<dashed>> stereotype
+hide <<dotted>> stereotype
+
+hide <<sharp>> stereotype
+
+hide <<fg>> stereotype
+hide <<bg>> stereotype
+hide <<line>> stereotype
+
+hide <<primary>> stereotype
+hide <<secondary>> stereotype
+hide <<tertiary>> stereotype
+hide <<quaternary>> stereotype
+
+hide <<bgprimary>> stereotype
+hide <<bgsecondary>> stereotype
+hide <<bgtertiary>> stereotype
+hide <<bgquaternary>> stereotype
+
+hide <<note>> stereotype
+hide <<warning>> stereotype
+hide <<caution>> stereotype
+hide <<important>> stereotype
+hide <<tip>> stereotype
+
+
+
+!function getColor($primary, $secondary)
+  !if ($primary == "transparent")
+    !return $secondary
+  !endif
+  !return $primary
+!endprocedure
+
+' Simple legend
+!procedure legend($title="Legend")
+skinparam LegendBorderColor transparent
+
+legend right
+  <#transparent,#transparent>| <color:transparent> --- |= $title |
+  | <getColor($PERSON_BGCOLOR, $PERSON_LINECOLOR)> | Person |
+  | <getColor($SYSTEM_BGCOLOR, $SYSTEM_LINECOLOR)> | System |
+  | <getColor($CONTAINER_BGCOLOR, $CONTAINER_LINECOLOR)> | Container |
+  | <getColor($COMPONENT_BGCOLOR, $COMPONENT_LINECOLOR)> | Component |
+  | <getColor($EXTERNAL_SYSTEM_BGCOLOR, $EXTERNAL_SYSTEM_LINECOLOR)> | External System |
+  | <getColor($EXTERNAL_CONTAINER_BGCOLOR, $EXTERNAL_CONTAINER_LINECOLOR)> | External Container |
+  | <getColor($EXTERNAL_COMPONENT_BGCOLOR, $EXTERNAL_COMPONENT_LINECOLOR)> | External Component |
+  ' | <img:https://img.plantuml.biz/plantuml/png/SoWkIImgAStDuSf9J4hDKL02miHYXKH3L7wI8LUYeOAk7OZXa9gN0jG00000>|sync|
+  ' | <img:https://img.plantuml.biz/plantuml/png/SoWkIImgAStDuSf9J4hDKL02miHYXKH3L7wI8LUYeO9kT4fYSKPgIgmTIC0XDIy5g140>|async|
+endlegend
+!endprocedure
+' legend()

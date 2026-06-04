@@ -1,0 +1,19 @@
+''
+'' Retro Coast Theme - Transparent Palette
+''
+'' Makes the diagram canvas and element backgrounds transparent while
+'' keeping all foreground colors, line colors, and C4 element colors
+'' from the default Retro Coast theme.
+''
+'' Usage:
+''   !include https://raw.githubusercontent.com/chden/puml-themes/main/palettes/retro-coast-transparent.iuml
+''   !theme retro-coast from https://raw.githubusercontent.com/chden/puml-themes/main/themes/retro-coast/
+''
+'' Author: Christoph Denninger
+'' License: MIT
+'' https://github.com/chden/puml-themes
+''
+
+!$BGCOLOR_ROOT ?= transparent
+!$BGCOLOR ?= transparent
+!$BOUNDARY_BGCOLOR ?= transparent

@@ -1,0 +1,8 @@
+@startuml
+
+!include ../palettes/retro-coast-transparent.iuml
+!theme retro-coast from ../themes/retro-coast
+
+!include retro-coast-color-palette.iuml
+
+@enduml

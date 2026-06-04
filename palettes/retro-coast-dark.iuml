@@ -1,0 +1,55 @@
+''
+'' Retro Coast Theme - Dark Palette
+''
+'' Darkened filled elements on a dark canvas. Element backgrounds are deeply
+'' darkened versions of the retro coast colors, borders use the original
+'' (slightly lightened) colors, and text is light for readability.
+''
+'' Usage:
+''   !include https://raw.githubusercontent.com/chden/puml-themes/main/palettes/retro-coast-dark.iuml
+''   !theme retro-coast from https://raw.githubusercontent.com/chden/puml-themes/main/themes/retro-coast/
+''
+'' Author: Christoph Denninger
+'' License: MIT
+'' https://github.com/chden/puml-themes
+''
+
+' Base colors
+!$BGCOLOR_ROOT ?= "#1e1e1e"
+!$BGCOLOR ?= %darken("#eeeeee", 60)
+!$FGCOLOR ?= "#d4d4d4"
+!$HYPERLINK_COLOR ?= %lighten("#16396e", 200)
+
+' Boundary colors
+!$BOUNDARY_BGCOLOR ?= $BGCOLOR_ROOT
+!$BOUNDARY_LINECOLOR ?= "#999999"
+
+' System colors (from Seafoam Blue #64a0e4)
+!$SYSTEM_BGCOLOR ?= %darken("#64a0e4", 50)
+
+' Software System colors (same as System)
+!$SOFTWARE_SYSTEM_BGCOLOR ?= %darken("#64a0e4", 50)
+
+' Container colors (from Aquamarine #98d4cc)
+!$CONTAINER_BGCOLOR ?= %darken("#98d4cc", 55)
+
+' Component colors (from Sea Green #78cc73)
+!$COMPONENT_BGCOLOR ?= %darken("#78cc73", 55)
+
+' Person colors (from Sand #eccd7d)
+!$PERSON_BGCOLOR ?= %darken("#eccd7d", 47)
+
+' External System colors
+!$EXTERNAL_SYSTEM_BGCOLOR ?= %darken("#a5a5a5", 75)
+
+' External Software System colors
+!$EXTERNAL_SOFTWARE_SYSTEM_BGCOLOR ?= %darken("#a5a5a5", 75)
+
+' External Container colors
+!$EXTERNAL_CONTAINER_BGCOLOR ?= %darken("#bebebe", 70)
+
+' External Component colors
+!$EXTERNAL_COMPONENT_BGCOLOR ?= %darken("#e0e0e0", 65)
+
+' External Person colors
+!$EXTERNAL_PERSON_BGCOLOR ?= %darken("#a5a5a5", 75)

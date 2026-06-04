@@ -1,0 +1,12 @@
+@startuml
+
+' Composability test: transparent canvas with blue-classic element colors
+' The transparent palette is included first, so its BGCOLOR value takes precedence
+' over the white BGCOLOR from blue-classic (due to the ?= operator)
+!include ../palettes/retro-coast-transparent.iuml
+!include ../palettes/retro-coast-blue-classic.iuml
+!theme retro-coast from ../themes/retro-coast
+
+!include retro-coast-color-palette.iuml
+
+@enduml
